@@ -45,7 +45,7 @@ export class Wave{
 
     ctx.moveTo(prevX, prevY);
 
-    for (let i = 0; i < this.totalPoints; i++) {
+    for (let i = 1; i < this.totalPoints; i++) {
       if (i < this.totalPoints - 1) {
         this.points[i].update();
       }
@@ -60,7 +60,7 @@ export class Wave{
 
     ctx.lineTo(prevX, prevY);
     ctx.lineTo(this.stageWidth, this.stageHeight);
-    ctx.lineTo(this.points[0].x, this.stageHeight);
+    ctx.lineTo(this.points[0].x , this.stageHeight);
     ctx.fill();
     ctx.closePath();
   }
